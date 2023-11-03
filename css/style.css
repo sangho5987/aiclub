@@ -2,7 +2,7 @@
 @font-face {font-family: 'c1'; src: url('./Cafe24D/Cafe24Dongdong-v2.0/Cafe24Dongdong-v2.0.ttf')}
 @font-face {font-family: 'c2'; src: url('./Cafe24S/Cafe24Simplehae-v2.0/Cafe24Simplehae-v2.0.ttf')}
 
-body {font-family: c1;}
+body {font-family: c1;min-width: 1200px;}
 
 header {width: 100%;height: 75px;border-bottom: 1px solid #9999aa;line-height: 75px;}
 h1 {color: #5522cc;font-size: 30px;font-family: c2;font-weight: bolder;width: 1020px;margin: 0 auto;}
