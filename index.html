@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>향수</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header><h1>향수 배합기</h1></header>
+    <section>
+        <div id="pflist">
+            <ol id="list"></ol>
+        </div>
+        <div id="pfdrop">
+            <ol id="droplist"></ol>
+            <ol id="num"></ol>
+            <input type="button" value="배 합" onclick="re()">
+        </div>
+    </section>
+    <script>
+        const perfume = {
+            1 : "프래그런스 오일, 블랙체리",
+            2 : "프래그런스 오일, 화이트머스크",
+            3 : "프래그런스 오일, 클린코튼",
+            4 : "프래그런스 오일, 코코마드모아젤",
+            5 : "프래그런스 오일, 화이트 자스민 앤 민트",
+            6 : "프래그런스 오일, 레몬 라벤더",
+            7 : "프래그런스 오일, 일랑일랑"
+        }
+        const ol = document.querySelector("#list");
+        const dol = document.querySelector("#droplist");
+        const nol = document.querySelector("#num");
+
+        re();
+        function re() {
+            ol.innerHTML = "";
+            dol.innerHTML = "";
+            nol.innerHTML = "";
+
+            let arr = [];
+
+            for (let i = 0; i < 3; i++) {
+            const num = Math.floor(Math.random()*7+1);
+            arr.indexOf(num) == -1 ? arr.push(num) : i-- ;
+            }
+            for (let i in perfume) {
+                const obj = perfume[i].split(",");
+                let msg = "";
+                arr.indexOf(Number(i)) != -1 ? msg = "☑" : msg = "";
+                ol.innerHTML += `<li>${i} : ${obj[0]}, <strong>${obj[1]} ${msg}</strong></li>`;
+            }
+            for (let i = 0; i < 3; i++) {
+                const obj = perfume[arr[i]].split(",");
+                dol.innerHTML += `<li>${i+1} : ${obj[0]}, <strong>${obj[1]}</strong></li>`;
+                nol.innerHTML += `<li>${Math.floor(Math.random()*3+1)}</li>`;
+            }
+        }
+    </script>
+</body>
+</html>
