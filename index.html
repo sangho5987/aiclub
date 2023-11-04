@@ -45,6 +45,7 @@
             const num = Math.floor(Math.random()*7+1);
             arr.indexOf(num) == -1 ? arr.push(num) : i-- ;
             }
+            arr.sort();
             for (let i in perfume) {
                 const obj = perfume[i].split(",");
                 let msg = "";
