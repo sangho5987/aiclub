@@ -17,7 +17,7 @@ li > strong {font-weight: bold;}
 
 #pfdrop {border-left: 1px solid #9999aa;width: 570px;box-sizing: border-box;padding-left: 50px;display: flex;flex-wrap: wrap;}
 #pfdrop > ol {height: 350px;}
-#pfdrop > #droplist {width: 500px;}
-#pfdrop > #num {width: 10px;text-align: center;}
+#pfdrop > #droplist {width: 470px;}
+#pfdrop > #num {width: 30px;text-align: center;}
 input {width: 500px;height: 70px;box-sizing: content-box;background-color: #6524FF;color: white;font-size: 20px;border: 1px solid #808080;font-weight: bold;transition: 0.5s ease-out;}
 input:hover {background-color: white;color: #6524FF}
